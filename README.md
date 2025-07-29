@@ -1,13 +1,13 @@
 # Intro
-<p>Hey there!, I'm Mystria, Please read everything below before reaching out. Note that I don't accept friend requests.<br>
+<p>Hey there!, I'm Mystria. Please read everything below before reaching out. Note that I don't accept friend requests.<br>
 
 # Work
-I am good at making almost everything, Here are some of my specialties
+I am good at making almost everything. Here are some of my specialties:
 
 -----------------------------------------
   - <p>Making Combat Systems.
   - <p>Making Ai/NPC.
-  - <p>Making Abilities / Skills.
+  - <p>Making Abilities/Skills.
   - <p>Making Tools.
   - <p>GuI Related Stuff.
   - <p>Making Cutscenes.
