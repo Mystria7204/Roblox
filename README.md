@@ -19,7 +19,7 @@ If what you're looking for isn't listed but is related, feel free to DM me, and 
 Some of the works i have made:
 
 -----------------------------------------
-- Simple NPC Dialogue : [[Streamable]](https://streamable.com/coihxo)
+- Dialogue : [[Streamable]](https://streamable.com/70ihvs)
 -----------------------------------------
 # Contact & Payment
 -----------------------------------------
