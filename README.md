@@ -26,6 +26,6 @@ Some of the works i have made:
 -----------------------------------------
 - <p>Contact me on Discord.
 - <p>I don't take % as a type of payment.
-- <p>I can do Paypal, Bitcoin, Robux.
+- <p>I can do Bitcoin, Robux.
 - <p>I take some partial payment upfront for security & for upholding both our ends.<br>
 -----------------------------------------
