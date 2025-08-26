@@ -20,6 +20,7 @@ Some of the works i have made:
 
 -----------------------------------------
 - Dialogue : [[Streamable]](https://streamable.com/70ihvs)
+- Ai/NPC : [[Streamable]](https://streamable.com/ata3ev)
 -----------------------------------------
 # Contact & Payment
 -----------------------------------------
