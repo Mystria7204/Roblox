@@ -19,8 +19,8 @@ If what you're looking for isn't listed but is related, feel free to DM me, and 
 Some of the works i have made:
 
 -----------------------------------------
+- Pathfinding NPC : [[Streamable]](https://streamable.com/ata3ev)
 - Dialogue : [[Streamable]](https://streamable.com/70ihvs)
-- Ai/NPC : [[Streamable]](https://streamable.com/ata3ev)
 -----------------------------------------
 # Contact & Payment
 -----------------------------------------
