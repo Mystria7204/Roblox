@@ -5,12 +5,14 @@
 I am good at making almost everything. Here are some of my specialties:
 
 -----------------------------------------
-  - <p>Making Combat Systems.
-  - <p>Making Ai/NPC.
-  - <p>Making Abilities/Skills.
-  - <p>Making Tools.
-  - <p>Making Cutscenes.
-  - <p>Making Dialogues.<br>
+  - <p>Combat Systems.
+  - <p>Quest Systems.
+  - <p>Leveling Systems.
+  - <p>NPC Systems.
+  - <p>Abilities/Skills.
+  - <p>Tools.
+  - <p>Cutscenes.
+  - <p>Dialogues.<br>
   -----------------------------------------
 If what you're looking for isn't listed but is related, feel free to DM me, and I'll see if I can help.
 
@@ -21,6 +23,7 @@ Some of the works i have made:
 - Pathfinding NPC: [[Streamable]](https://streamable.com/ata3ev)
 - Dialogue: [[Streamable]](https://streamable.com/70ihvs)
 - Quest System: [[Streamable]](https://streamable.com/11hrsg)
+- Grappling Hook Tool: [[Streamable]](https://streamable.com/phcbjv)
 -----------------------------------------
 # Contact & Payment
 -----------------------------------------
