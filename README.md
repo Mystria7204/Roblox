@@ -24,7 +24,7 @@ Some of the works i have made:
 - Dialogue: [[Streamable]](https://streamable.com/70ihvs)
 - Quest System: [[Streamable]](https://streamable.com/11hrsg)
 - Grappling Hook Tool: [[Streamable]](https://streamable.com/phcbjv)
-- Ugrade System: [[Streamable]][(https://streamable.com/s6ziqv)
+- Ugrade System: [[Streamable]](https://streamable.com/s6ziqv)
 -----------------------------------------
 # Contact & Payment
 -----------------------------------------
