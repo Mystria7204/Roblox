@@ -23,7 +23,7 @@ Some of the works i have made:
 - Pathfinding NPC: [[Streamable]](https://streamable.com/ata3ev)
 - Dialogue: [[Streamable]](https://streamable.com/70ihvs)
 - Quest System: [[Streamable]](https://streamable.com/11hrsg)
-- Ugrade System: [[Streamable]](https://streamable.com/s6ziqv)
+- Upgrade System: [[Streamable]](https://streamable.com/s6ziqv)
 - Grappling Hook Tool: [[Streamable]](https://streamable.com/phcbjv)
 -----------------------------------------
 # Contact & Payment
