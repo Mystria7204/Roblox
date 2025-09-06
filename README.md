@@ -21,7 +21,7 @@ Some of the works i have made:
 
 -----------------------------------------
 - Pathfinding NPC: [[Streamable]](https://streamable.com/ata3ev)
-- Dialogue: [[Streamable]](https://streamable.com/70ihvs)
+- Dialogue System: [[Streamable]](https://streamable.com/70ihvs)
 - Quest System: [[Streamable]](https://streamable.com/11hrsg)
 - Upgrade System: [[Streamable]](https://streamable.com/s6ziqv)
 -----------------------------------------
