@@ -14,9 +14,9 @@ I am good at making almost everything. Here are some of my specialties:
   - <p>DataStores & Data Saving.
   - <p>Abilities & Skills.
   - <p>Inventory & Trading Systems
-  - <p>Leaderstats & Progression
-  - <p>Event/Reward Systems
-  - <p>Security & Anti-Exploit Measures
+  - <p>Leaderstats & Progression.
+  - <p>Event/Reward Systems.
+  - <p>Security & Anti-Exploit Measures.
   -----------------------------------------
 If what you're looking for isn't listed but is related, feel free to DM me, and I'll see if I can help.
 
