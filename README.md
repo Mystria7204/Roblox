@@ -6,13 +6,17 @@ I am good at making almost everything. Here are some of my specialties:
 
 -----------------------------------------
   - <p>Combat Systems.
-  - <p>Quest Systems.
-  - <p>Leveling Systems.
-  - <p>NPC Systems.
-  - <p>Abilities/Skills.
-  - <p>Tools.
-  - <p>Cutscenes.
-  - <p>Dialogues.<br>
+  - <p>Quest & Leveling Systems.
+  - <p>NPC/AI & Pathfinding.
+  - <p>Dialogue & Cutscene Systems.
+  - <p>Shop & Economy Systems.
+  - <p>UI Systems.
+  - <p>DataStores & Data Saving.
+  - <p>Abilities & Skills.
+  - <p>Inventory & Trading Systems
+  - <p>Leaderstats & Progression
+  - <p>Event/Reward Systems
+  - <p>Security & Anti-Exploit Measures
   -----------------------------------------
 If what you're looking for isn't listed but is related, feel free to DM me, and I'll see if I can help.
 
@@ -22,7 +26,7 @@ Some of the works i have made:
 -----------------------------------------
 - Pathfinding NPC: [[Streamable]](https://streamable.com/ata3ev)
 - Dialogue System: [[Streamable]](https://streamable.com/70ihvs)
-- Quest System: [[Streamable]](https://streamable.com/11hrsg)
+- Quest System: [[Streamable]](https://streamable.com/11hrsg) 
 - Upgrade System: [[Streamable]](https://streamable.com/s6ziqv)
 -----------------------------------------
 # Contact & Payment
