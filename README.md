@@ -28,7 +28,7 @@ Some of the works i have made:
 - Dialogue System: [[Streamable]](https://streamable.com/70ihvs)
 - Quest System: [[Streamable]](https://streamable.com/11hrsg) 
 - Upgrade System: [[Streamable]](https://streamable.com/s6ziqv)
-- Inventory System & Shop System: [[Streamable]](https://streamable.com/xsqd8u)
+- Inventory System: [[Streamable]](https://streamable.com/xsqd8u)
 -----------------------------------------
 # Contact & Payment
 -----------------------------------------
