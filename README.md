@@ -13,7 +13,7 @@ I am good at making almost everything. Here are some of my specialties:
   - <p>UI Systems.
   - <p>DataStores & Data Saving.
   - <p>Abilities & Skills.
-  - <p>Inventory & Trading Systems
+  - <p>Inventory & Trading Systems.
   - <p>Leaderstats & Progression.
   - <p>Event/Reward Systems.
   - <p>Security & Anti-Exploit Measures.
