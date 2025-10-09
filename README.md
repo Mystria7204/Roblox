@@ -29,6 +29,7 @@ Some of the works i have made:
 - Quest System: [[Streamable]](https://streamable.com/11hrsg) 
 - Upgrade System: [[Streamable]](https://streamable.com/s6ziqv)
 - Inventory System: [[Streamable]](https://streamable.com/xsqd8u)
+- Trading System: [[Streamable]](https://streamable.com/0u9w5p)
 - Map System: [[Streamable]](https://streamable.com/i2vrx9)
 -----------------------------------------
 # Contact & Payment
