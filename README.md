@@ -24,7 +24,7 @@ If what you're looking for isn't listed but is related, feel free to DM me, and 
 Some of the works i have made:
 
 -----------------------------------------
-- Pathfinding NPC: [[Streamable]](https://streamable.com/ata3ev)
+- Pathfinding AI: [[Streamable]](https://streamable.com/ata3ev)
 - Dialogue System: [[Streamable]](https://streamable.com/70ihvs)
 - Quest System: [[Streamable]](https://streamable.com/11hrsg) 
 - Upgrade System: [[Streamable]](https://streamable.com/s6ziqv)
