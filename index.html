@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystria7204 | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-tomorrow.css" rel="stylesheet" />
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; line-height:1.6; scroll-behavior:smooth; padding-top:80px; color:#fff; background: linear-gradient(135deg,#1e1b4b,#312e81,#1e1b4b); background-size:400% 400%; animation:gradientShift 30s ease infinite; transition: background 0.5s ease, color 0.5s ease; }
+:root { --bg-gradient: linear-gradient(135deg,#1e1b4b,#312e81,#1e1b4b); --card-bg: rgba(2,6,23,0.85); --accent:#a855f7; }
+body.dark-mode { --bg-gradient: linear-gradient(135deg,#11101f,#1b1933,#11101f); --card-bg: rgba(15,10,35,0.85); --accent:#9333ea; }
+body.theme-purple { --accent:#a855f7; }
+body.theme-blue { --accent:#1e90ff; }
+body.theme-green { --accent:#00ff99; }
+body { background:var(--bg-gradient); transition: background 0.5s, color 0.5s; }
+
+.navbar { position: fixed; top:0; left:0; width:100%; background-color:#020617; border-bottom:3px solid var(--accent); padding:16px 60px; display:flex; justify-content:space-between; align-items:center; z-index:999; }
+.logo { font-size:20px; font-weight:bold; color:var(--accent); font-family:'Poppins',sans-serif; }
+nav a { margin-left:28px; font-size:14px; color:#e5e7eb; text-decoration:none; transition: color 0.3s; }
+nav a:hover { color:var(--accent); }
+#dark-toggle { margin-left:16px; cursor:pointer; background:none; border:none; color:#fff; font-size:18px; }
+#theme-select { margin-left:16px; cursor:pointer; background:none; border:none; color:#fff; font-size:16px; }
+
+.hero { min-height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; }
+.hero h1 { font-size:56px; margin-bottom:16px; text-shadow:0 4px 20px rgba(0,0,0,0.5); font-family:'Poppins',sans-serif; overflow:hidden; white-space:nowrap; border-right:0.15em solid #fff; }
+.hero p { font-size:18px; max-width:600px; opacity:0.9; margin-bottom:32px; }
+
+.button { background-color:var(--accent); color:#020617; padding:14px 32px; border-radius:999px; font-weight:bold; text-transform:uppercase; letter-spacing:1px; cursor:pointer; text-decoration:none; display:inline-block; margin-top:8px; transition: background 0.3s ease, transform 0.2s ease; }
+.button:hover { background-color:#9333ea; transform:translateY(-2px); }
+
+.section { max-width:1100px; margin:0 auto; padding:80px 60px; background-color:var(--card-bg); border-radius:20px; margin-bottom:60px; box-shadow:0 20px 40px rgba(0,0,0,0.4); }
+.section h2, .section p, .section ul li, .video-card, .project-card, .code-card { opacity:0; transform:translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.section h2.visible, .section p.visible, .section ul li.visible, .video-card.visible, .project-card.visible, .code-card.visible { opacity:1; transform:translateY(0); }
+
+.section hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  margin: 24px 0;
+  opacity: 0.9;
+}
+.section h2 { font-size:32px; margin-bottom:24px; color:var(--accent); font-family:'Poppins',sans-serif; }
+
+.projects-grid, .videos-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:24px; margin-top:20px; }
+
+.project-card, .video-card, .code-card { background-color:var(--card-bg); border:2px solid var(--accent); padding:20px; border-radius:16px; transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; cursor:pointer; position:relative; overflow:hidden; }
+.project-card:hover, .video-card:hover, .code-card:hover { transform:translateY(-6px) scale(1.03); box-shadow:0 20px 40px rgba(168,85,247,0.5); border-color:#9333ea; }
+.project-card h3, .video-card h3, .code-card h3 { margin-bottom:12px; }
+
+#lightbox { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:flex; justify-content:center; align-items:center; opacity:0; transform:scale(0.95); transition:0.3s; pointer-events:none; z-index:1000; }
+#lightbox.show { opacity:1; transform:scale(1); pointer-events:auto; }
+#lightbox pre { max-width:100%; max-height:90vh; overflow:auto; border-radius:12px; padding:24px; background:#11101f; font-size:15px; }
+#lightbox .close { position:absolute; top:20px; right:40px; font-size:32px; color:#fff; cursor:pointer; z-index:1001; }
+
+.footer { text-align:center; padding:40px; font-size:14px; opacity:0.6; }
+ul li { margin-bottom:8px; }
+
+@keyframes gradientShift { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } }
+
+@media(max-width:768px){ .navbar{padding:16px 20px;} .hero h1{font-size:40px;} .section{padding:60px 20px;} #lightbox iframe{width:90%;height:50%;} }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Mystria7204</div>
+  <nav>
+    <a href="#hero">About</a>
+    <a href="#work">Work</a>
+    <a href="#videos">Videos</a>
+    <a href="#codes">Code</a>
+    <a href="#contact">Contact</a>
+    <button id="dark-toggle">🌙</button>
+    <select id="theme-select">
+      <option value="theme-purple">Purple</option>
+      <option value="theme-blue">Blue</option>
+      <option value="theme-green">Green</option>
+    </select>
+  </nav>
+</header>
+
+<section id="hero" class="hero">
+  <h1 id="hero-text"></h1>
+  <p>Please read everything below before reaching out. Note that I don't accept friend requests.</p>
+  <div class="badges">
+    <a href="https://discord.com/users/824083963978973216" target="_blank">
+      <img src="https://img.shields.io/badge/Discord-Mystria7204-5865F2?style=for-the-badge&logo=discord&logoColor=white">
+    </a>
+    <a href="https://www.roblox.com/users/1114096637/profile" target="_blank">
+      <img src="https://img.shields.io/badge/Roblox-Zarc7204-CC0000?style=for-the-badge&logo=roblox&logoColor=white">
+    </a>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <h2>💼 Work & Specialties</h2>
+  <p>I specialize in creating <strong>High-quality</strong>, <strong>Modular</strong>, and <strong>Secure Systems</strong>. Here are some of my specialties:</p>
+  <hr>
+  <ul>
+    <li>Combat Systems</li>
+    <li>Quest & Leveling Systems</li>
+    <li>NPC/AI & Pathfinding</li>
+    <li>Dialogue & Cutscene Systems</li>
+    <li>Shop & Economy Systems</li>
+    <li>UI Systems</li>
+    <li>DataStores & Data Saving</li>
+    <li>Abilities & Skills</li>
+    <li>Inventory & Trading Systems</li>
+    <li>Leaderstats & Progression</li>
+    <li>Event/Reward Systems</li>
+    <li>Security & Anti-Exploit Measures</li>
+  </ul>
+</section>
+
+<section id="videos" class="section">
+  <h2>🎬 Showcase: Videos</h2>
+  <div class="videos-grid">
+    <div class="video-card" data-src="https://streamable.com/e/ata3ev"><h3>NPC System</h3></div>
+    <div class="video-card" data-src="https://streamable.com/e/70ihvs"><h3>Dialogue System</h3></div>
+    <div class="video-card" data-src="https://streamable.com/e/11hrsg"><h3>Quest System</h3></div>
+    <div class="video-card" data-src="https://streamable.com/e/s6ziqv"><h3>Upgrade System</h3></div>
+    <div class="video-card" data-src="https://streamable.com/e/xsqd8u"><h3>Inventory System</h3></div>
+    <div class="video-card" data-src="https://streamable.com/e/0u9w5p"><h3>Trading System</h3></div>
+    <div class="video-card" data-src="https://streamable.com/e/i2vrx9"><h3>Map System</h3></div>
+    <div class="video-card" data-src="https://streamable.com/e/mbqcm8"><h3>Morphing System</h3></div>
+  </div>
+</section>
+
+<section id="codes" class="section">
+  <h2>💻 Showcase: Code</h2>
+  <div class="videos-grid">
+    <div class="code-card" data-code="--| Author: Mystria7204
+--| Description: Basic Player-Data Framework
+
+--| Features:
+--|  - Persistent player data via ProfileStore.
+--|  - Studio vs Live datastore separation.
+--|  - Warp signals for client requests and load confirmation.
+--|  - Safe session management, timeouts, and data redaction.
+
+local PlayerDataService = {}
+
+--| Services
+local Players = game:GetService('Players')
+local RunService = game:GetService('RunService')
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+
+--| Libraries
+local Warp = require(ReplicatedStorage:WaitForChild('Modules').Warp)
+local ProfileStore = require(script.ProfileStore)
+local DataTemplate = require(script.DataTemplate)
+
+--| Studio
+local IsStudio = RunService:IsStudio()
+
+--| Warp Signals
+local RequestData = Warp.Server('RequestData')
+local ClientLoaded = Warp.Server('ClientLoaded')
+local PlayerDataLoaded = Warp.Signal('PlayerDataLoaded')
+
+--| DataTemplate defines the default profile for each player.
+local DataTemplate = {
+	Currency = 500,
+	Level = 1,
+	Items = {'Test Sword'},
+	Experience = 0,
+}
+
+--| Variables
+local DATASTORE_BASE = 'PlayerData_v1'
+local datastoreName = DATASTORE_BASE
+
+if IsStudio then
+	datastoreName = ('Studio%s'):format(DATASTORE_BASE)
+end
+
+local PlayerStore = ProfileStore.New(datastoreName, DataTemplate)
+
+type ProfileData = typeof(DataTemplate)
+type ProfileSession = typeof(PlayerStore:StartSessionAsync())
+type PlayerProfiles = {[Player]: ProfileSession}
+
+PlayerDataService.Profiles = {} :: PlayerProfiles
+
+--// Runtime
+local function waitForProfile(player, timeoutSeconds)
+	local start = os.clock()
+	while not PlayerDataService.Profiles[player] and os.clock() - start < timeoutSeconds do
+		task.wait()
+	end
+	return PlayerDataService.Profiles[player]
+end
+
+function PlayerDataService:GrabData(player)
+	local profile = PlayerDataService.Profiles[player]
+	if not profile then
+		return nil, 'ProfileNotLoaded'
+	end
+	return profile.Data
+end
+
+ClientLoaded:Connect(function(player)
+	if not player or not player:IsA('Player') then
+		return
+	end
+
+	local profile = waitForProfile(player, 10)
+	if not profile then
+		if player.Parent == Players then
+			player:Kick('Profile load failed. Please rejoin.')
+		end
+		return
+	end
+
+	PlayerDataLoaded:Fire(player, profile.Data)
+end)
+
+local function onSessionEnd(profile, player)
+	PlayerDataService.Profiles[player] = nil
+end
+
+local function PlayerAdded(player)
+	local key = ('User_%d'):format(player.UserId)
+	local profile = PlayerStore:StartSessionAsync(key, {
+		Cancel = function()
+			return player.Parent ~= Players
+		end,
+	})
+
+	if not profile then
+		if player.Parent == Players then
+			player:Kick('Profile load failed. Please rejoin.')
+		end
+		return
+	end
+
+	profile:AddUserId(player.UserId)
+	profile:Reconcile()
+
+	profile.OnSessionEnd:Connect(function()
+		onSessionEnd(profile, player)
+		if player and player.Parent == Players then
+			player:Kick('Profile session end. Please rejoin.')
+		end
+	end)
+
+	if player.Parent == Players then
+		PlayerDataService.Profiles[player] = profile
+		if IsStudio then
+			print(('Profile loaded for %s'):format(player.Name))
+		end
+	else
+		profile:EndSession()
+	end
+end
+
+for _, player in ipairs(Players:GetPlayers()) do
+	task.spawn(PlayerAdded, player)
+end
+
+RequestData:Connect(function(requester, whichPlayer)
+	if not requester or not requester:IsA('Player') then
+		return nil, 'InvalidRequester'
+	end
+
+	local target = whichPlayer or requester
+	local profile = PlayerDataService.Profiles[target]
+
+	if not profile then
+		profile = waitForProfile(target, 5)
+	end
+
+	if not profile then
+		return nil, 'ProfileNotLoaded'
+	end
+
+	local safeData = table.clone(profile.Data)
+	return safeData
+end)
+
+Players.PlayerAdded:Connect(PlayerAdded)
+
+Players.PlayerRemoving:Connect(function(player)
+	local profile = PlayerDataService.Profiles[player]
+	if profile then
+		profile:EndSession()
+	end
+end)
+
+do return PlayerDataService end">
+      <h3>Player Data Framework</h3>
+    </div>
+    
+    <div class="code-card" data-code="--| Author: Mystria7204
+--| Description: Basic Currency Framework.
+
+--| Features:
+--|  Demonstration version of a currency framework that mirrors a production-ready currency service.
+--|  This module exposes the same public API as the live system for testing and portfolio use.
+--|  In live environments, currency is backed by PlayerDataService.
+--|  In Studio, an isolated in-memory store is used for safe emulation.
+
+local CurrencyService = {}
+
+--| Services
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local RunService = game:GetService('RunService')
+
+--| Libraries
+local Warp = require(ReplicatedStorage:WaitForChild('Modules').Warp)
+local Types = require(ReplicatedStorage.Modules.Types)
+local PlayerDataService = require(script.Parent.PlayerDataService)
+
+--| Studio
+local IsStudio = RunService:IsStudio()
+
+--| Warp Signals
+local UpdateCurrency = Warp.Server('UpdateCurrency')
+
+--| Demo Storage
+local DemoCurrency = {}
+
+--// Internal
+local function getContainer(player)
+	local data = PlayerDataService:GrabData(player)
+	if data then
+		return data, false
+	end
+
+	if IsStudio then
+		DemoCurrency[player] = DemoCurrency[player] or {}
+		return DemoCurrency[player], true
+	end
+
+	return nil
+end
+
+--// Runtime
+function CurrencyService:GetCurrency(player, currency: Types.Currency)
+	local container = getContainer(player)
+	if not container then return end
+	return container[currency] or 0
+end
+
+function CurrencyService:HasEnough(player: Player, amount: number, currency: Types.Currency)
+	local container = getContainer(player)
+	if not container then return end
+	return (container[currency] or 0) >= amount
+end
+
+function CurrencyService:AddCurrency(player, amount: number, currency: Types.Currency)
+	local container = getContainer(player)
+	if not container then return end
+
+	amount = math.floor(math.abs(amount))
+	container[currency] = (container[currency] or 0) + amount
+
+	UpdateCurrency:Fire(false, player, currency, container[currency])
+end
+
+function CurrencyService:SubCurrency(player, amount: number, currency: Types.Currency)
+	local container = getContainer(player)
+	if not container then return end
+
+	amount = math.floor(math.abs(amount))
+	local current = container[currency] or 0
+	if amount > current then return end
+
+	container[currency] = current - amount
+	UpdateCurrency:Fire(false, player, currency, container[currency])
+end
+
+function CurrencyService:SetCurrency(player, amount: number, currency: Types.Currency)
+	local container = getContainer(player)
+	if not container then return end
+
+	container[currency] = math.floor(amount)
+	UpdateCurrency:Fire(false, player, currency, container[currency])
+end
+
+if IsStudio then
+	game:GetService('Players').PlayerRemoving:Connect(function(player)
+		DemoCurrency[player] = nil
+	end)
+end
+
+do return CurrencyService end">
+      <h3>Currency Framework</h3>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox">
+  <span class="close">&times;</span>
+  <div id="lightbox-content"></div>
+</div>
+
+<section id="contact" class="section">
+  <h2>📬 Contact & Payment</h2>
+  <ul>
+    <li>Contact me on <strong>Discord</strong></li>
+    <li>I don't take % as a type of payment</li>
+    <li>Accepted payment methods: <strong>Crypto</strong>, <strong>Robux</strong>, <strong>Giftcards</strong></li>
+    <li>I take partial upfront payment for security & to uphold both ends</li>
+  </ul>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Made by Mystria7204</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-lua.min.js"></script>
+<script>
+const heroText = "Hey there! I'm Mystria";
+const heroEl = document.getElementById('hero-text');
+let i=0;
+function typeHero(){ if(i<heroText.length){ heroEl.textContent+=heroText.charAt(i); i++; setTimeout(typeHero,50);} }
+typeHero();
+
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const items=entry.target.querySelectorAll('h2,p,ul li,.video-card,.project-card,.code-card');
+      items.forEach((el,i)=>{ setTimeout(()=>el.classList.add('visible'), i*150); });
+    }
+  });
+},{threshold:0.2});
+sections.forEach(section=>observer.observe(section));
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxContent = document.getElementById('lightbox-content');
+const closeBtn = lightbox.querySelector('.close');
+
+// Video cards
+document.querySelectorAll('.video-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const iframe = document.createElement('iframe');
+    iframe.src = card.getAttribute('data-src');
+    iframe.allowFullscreen = true;
+    iframe.style.width = '90vw';
+    iframe.style.height = '90vh';
+    iframe.style.maxWidth = '1400px';
+    iframe.style.maxHeight = '800px';
+    iframe.style.border = 'none';
+    iframe.style.borderRadius = '12px';
+    
+    lightboxContent.innerHTML = '';
+    lightboxContent.appendChild(iframe);
+    lightbox.classList.add('show');
+  });
+});
+
+// Code cards
+document.querySelectorAll('.code-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const code = card.getAttribute('data-code');
+    const pre = document.createElement('pre');
+    const codeEl = document.createElement('code');
+    codeEl.className = 'language-lua';
+    codeEl.textContent = code;
+    pre.appendChild(codeEl);
+    
+    lightboxContent.innerHTML = '';
+    lightboxContent.appendChild(pre);
+    Prism.highlightElement(codeEl);
+    lightbox.classList.add('show');
+  });
+});
+
+const closeLightbox = () => {
+  lightbox.classList.remove('show');
+  setTimeout(() => lightboxContent.innerHTML = '', 300);
+};
+
+closeBtn.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => {
+  if(e.target === lightbox) closeLightbox();
+});
+
+// Dark mode & theme
+document.getElementById('dark-toggle').addEventListener('click',()=>document.body.classList.toggle('dark-mode'));
+document.getElementById('theme-select').addEventListener('change',e=>{
+  document.body.classList.remove('theme-purple','theme-blue','theme-green');
+  document.body.classList.add(e.target.value);
+});
+</script>
+</body>
+</html>
